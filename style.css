@@ -18,13 +18,13 @@ body{
     max-width: 900px;
 }
 
-
-
 .grid-item{
+    position:relative;
     padding:20px;
     margin-bottom:15px;
     border-radius:5px;
     box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.274);
+    overflow: hidden;
 }
 
 #tes-1{
@@ -54,11 +54,13 @@ body{
 }
 
 /* Content Styling */
-img{
+.info-container img{
     border-radius:50%;
 }
 
 .info-container{
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items:center;
     padding-bottom: 10px;
@@ -74,10 +76,19 @@ img{
 }
 
 .grid-item h2{
+    position: relative;
+    z-index: 1;
     font-weight: 600;
     padding-bottom: 15px;
 }
 
 .grid-item > p{
     opacity: 0.7;
+}
+
+#quote-svg{
+    z-index:0;
+    position:absolute;
+    top:0;
+    right:40px;
 }
